@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ListComponent } from './list/list.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidebarComponent,
+    CalendarComponent,
+    ListComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

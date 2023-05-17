@@ -1,0 +1,19 @@
+<div class="sidebar" [ngClass]="collapsed ? 'sidebar-collapsed' : ''">
+	<div class="logo-container">
+		<button class="logo" (click)="toggle()">
+			<img src="/assets/logo.svg" />
+        </button>
+		<div class="logo-text" *ngIf="!collapsed">Todolist</div>
+		<button class="btn-close" *ngIf="!collapsed" (click)="toggle()">
+			<i class="fal fa-times close-icon"></i>
+		</button>
+	</div>
+	<ul class="sidebar-nav">
+		<li class="sidebar-nav-item" *ngFor="let item of data">
+			<a [routerLink]="[item.routerLink]" class="sidebar-nav-item-link">
+				<i class="sidebar-nav-item-link-icon" [class]="item.icon"></i>
+				<span class="sidebar-nav-item-link-text" *ngIf="!collapsed">{{ item.label }}</span>
+			</a>
+		</li>
+	</ul>
+</div>
